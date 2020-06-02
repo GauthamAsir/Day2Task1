@@ -1,9 +1,9 @@
 package a.gautham.day2_task1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,14 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val counter_tv = findViewById<TextView>(R.id.counter_tv);
-        val increase = findViewById<Button>(R.id.increase);
+        val counterTv = findViewById<TextView>(R.id.counter_tv)
+        val increase = findViewById<Button>(R.id.increase)
 
-        var counter = counter_tv.toString().toInt();
+        var counter = 0
 
         increase.setOnClickListener {
-            counter += 1;
-            counter_tv.setText(counter.toString());
+            counter += 1
+            counterTv.text = counter.toString()
         }
 
     }
